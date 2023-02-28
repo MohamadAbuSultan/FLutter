@@ -1,0 +1,62 @@
+import 'package:flutter/material.dart';
+
+void main(List<String> args) {
+  runApp(Hello());
+}
+
+class Hello extends StatelessWidget {
+  const Hello();
+
+  // Row برتب الويدجت تحت بعض
+  // بياخذ طول السكرين كلها
+  // فيه child بتاع أكبر width بياخذ ال Row ال
+  // center في ال children بيرتب ال Row ال
+  // main axis => x محور
+  // cross axis => y محور
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Row(
+          mainAxisSize: MainAxisSize.min, // بالزبط children على قد ال
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              height: 150,
+              width: 100,
+              color: Colors.blue,
+              child: const Center(
+                child: Text(
+                  "Hello World",
+                ),
+              ),
+            ),
+            Container(
+              height: 100,
+              width: 100,
+              color: Colors.brown,
+              child: const Center(
+                child: Text(
+                  "Hello World",
+                ),
+              ),
+            ),
+            Container(
+              height: 100,
+              width: 100,
+              color: Colors.green,
+              child: const Center(
+                child: Text(
+                  "Hello World",
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}

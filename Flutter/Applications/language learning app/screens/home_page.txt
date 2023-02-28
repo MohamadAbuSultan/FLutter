@@ -1,0 +1,76 @@
+import 'package:flutter/material.dart';
+import 'package:languagelearning/screens/family_members_page.dart';
+import 'package:languagelearning/screens/numbers_page.dart';
+import '../components/category_item.dart';
+import 'colors_page.dart';
+import 'mohamad_test.dart';
+import 'phrases_page.dart';
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xffFFF4DA),
+      appBar: AppBar(
+        title: const Text("Toku"),
+        backgroundColor: const Color(0xff422E28),
+      ),
+      body: Column(
+        children: [
+          Category(
+            text: "Numbers",
+            color: const Color(0xffEF9235),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) {
+                return const NumbersPage();
+              }));
+            },
+          ),
+          Category(
+            text: "Family Members",
+            color: const Color(0xff538033),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) {
+                return const FamilyMembersPage();
+              }));
+            },
+          ),
+          Category(
+            text: "Colors",
+            color: const Color(0xff7E3FA3),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) {
+                return const ColorsPage();
+              }));
+            },
+          ),
+          Category(
+            text: "Phrases",
+            color: const Color(0xff48A5CC),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) {
+                return const PhrasesPage();
+              }));
+            },
+          ),
+          // for test (dark theme)
+          Category(
+            text: "Mohamad",
+            color: const Color.fromARGB(255, 0, 10, 14),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return const ForTest();
+              }));
+            },
+          ),
+        ],
+      ),
+    );
+  }
+}

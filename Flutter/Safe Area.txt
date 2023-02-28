@@ -1,0 +1,6 @@
+SafeArea(
+        child: ListView(
+          children: List.generate(10, (index) => const Text("this is text")),
+        ),
+      ),
+    ),

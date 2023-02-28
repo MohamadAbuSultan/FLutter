@@ -1,0 +1,16 @@
+import 'package:flutter/material.dart';
+
+void main(List<String> args) {
+  // material app هي أساس التطبيق ، بنحط فيها المكونات إلي بتشكل التطبيق
+  // تبعي ui للشكل بتاع ال guidelines بتوفرلي التعليمات أو ال
+  // MaterialApp Widget is a Class_Object (we use constructor)
+  // MaterialApp have attributes like : home,
+  //  Widgets describe what their view should look like given their current configuration and state
+  runApp(const MaterialApp(
+    debugShowCheckedModeBanner: false,
+    // home attributes is the screen of the app
+    home: Center(
+      child: Text("Hello World"),
+    ),
+  ));
+}

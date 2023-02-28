@@ -1,0 +1,10 @@
+Scaffold(
+        appBar: AppBar(
+          title: const Text("تجريبية"),
+          automaticallyImplyLeading: false,
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back, color: Colors.orange),
+            onPressed: () => Navigator.of(context).pop(),
+          ),
+        ),
+	),
